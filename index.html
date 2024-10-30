@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>PROYECTO FINAL</title>
+    <!-- FUENTE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cambay:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Cambay:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap" rel="stylesheet">
+
+    <!-- ICONOS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100&icon_names=add,search,sort"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header-container">
+      <div class="header-content">
+        <div class="buscador">
+          <input type="text" id="input-header" placeholder="Ingrese un elemento" />
+          <button class="header-button" id="button-search">
+            <span class="material-symbols-outlined"> search </span> Buscar
+          </button>
+        </div>
+        <div class="agregar-boton">
+          <button class="header-button" id="buttonAdd">
+            <span class="material-symbols-outlined"> add </span>
+            Agregar elemento
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- MAIN -->
+    <main class="main-container">
+      <aside class="sidebar">
+        <h2>Categorias <span class="material-symbols-outlined">sort</span></h2>
+        <ul id="sidebar-filter"></ul>
+      </aside>
+
+      <div class="store" id="store-container">
+
+
+
+      </div>
+
+      <!-- POPUP   -->
+      <div class="popup-container" id="modalPopUp">
+        <div class="popup-content">
+          <h2>Agregar o modificar elemento</h2>
+          <form id="form" class="form-container">
+            <input
+              placeholder="Nombre"
+              type="text"
+              id="nombre"
+              name="nombre"
+              required
+            />
+
+            <input
+              placeholder="Precio"
+              type="number"
+              id="precio"
+              name="precio"
+              required
+            />
+
+            <input
+              placeholder="Imagen"
+              type="text"
+              id="imagen"
+              name="imagen"
+              required
+            />
+
+            <select id="categoria" name="categoria" required>
+              <option selected value="">Seleccione una categoria</option>
+              <option value="Gaseosas">Gaseosas</option>
+              <option value="Hamburguesas">Hamburguesas</option>
+              <option value="Papas">Papas</option>
+            </select>
+            <div>
+              <button class="button-popup cancel" id="button-close">Cancelar</button>
+              <button class="button-popup delete" id="button-delete">Eliminar</button>
+              <button class="button-popup accept" id="button-accept">Aceptar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
